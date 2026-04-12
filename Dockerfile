@@ -1,5 +1,4 @@
-# FROM --platform=arm64 ubuntu:24.04
-FROM --platform=arm64 debian:stable-slim
+FROM debian:stable-slim
 
 # Update the package lists
 RUN apt update
