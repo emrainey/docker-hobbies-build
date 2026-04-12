@@ -22,9 +22,9 @@ RUN apt install -y git cmake make ninja-build
 # adds the Host compiler
 RUN apt install -y clang-19 clangd-19 llvm-19 lld-19 lldb-19 libc++-19-dev libc++abi-19-dev libomp-dev
 # Installs developer tools
-RUN apt install -y lcov gcovr doxygen graphviz catch2 libgtest-dev valgrind cppcheck
+RUN apt install -y lcov gcovr doxygen graphviz catch2 libgtest-dev libgmock-dev libbenchmark-dev valgrind cppcheck
 # Add Python3 and Pip3
-RUN apt install -y python3 python3-pip python3-venv python3-setuptools
+RUN apt install -y python3 python3-pip python3-venv python3-setuptools python3-pybind11 python3-pytest python3-pytest-cov
 # Add some libraries we need
 RUN apt install -y ncurses-dev libopencv-dev libsdl2-dev libssl-dev
 # Clean up unnecessary packages
